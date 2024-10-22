@@ -1,0 +1,16 @@
+<div>
+    <h2>Parent Component (Default Change Detection)</h2>
+    <!-- Display the message from the parent's instance of SharedService -->
+    <p>Parent Service Message: {{ sharedService.message }}</p>
+    <p>Primitive Data: {{ primitiveData }}</p> <!-- Displays the primitive data -->
+    <p>Non-Primitive Data: {{ nonPrimitiveData.count }}</p> <!-- Displays the non-primitive data -->
+
+    <!-- Button to update primitive data -->
+    <button class="me-2" (click)="updatePrimitive()">Update Primitive Data</button>
+
+    <!-- Button to update non-primitive data -->
+    <button (click)="updateNonPrimitive()">Update Non-Primitive Data</button>
+
+    <!-- Child component which receives non-primitive data as input -->
+    <app-child [data]="nonPrimitiveData"></app-child>
+</div>

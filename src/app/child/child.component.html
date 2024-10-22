@@ -1,0 +1,11 @@
+<!-- child.component.html -->
+<div>
+    <h3>Child Component (OnPush Change Detection)</h3>
+    <!-- Display the message from the child's instance of SharedService -->
+    <p>Child Service Message: {{ sharedService.message }}</p>
+    <p>Parent Data: {{ data?.count }}</p> <!-- Displays data from the parent component -->
+    <p>Child Data: {{ childData }}</p> <!-- Displays child component's independent data -->
+
+    <!-- Button to update child component's data -->
+    <button (click)="updateChildData()">Update Child Data</button>
+</div>
